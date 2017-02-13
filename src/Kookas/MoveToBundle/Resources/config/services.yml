@@ -1,0 +1,7 @@
+services:
+    kookas.move_to:
+        class: Kookas\MoveToBundle\Twig\MoveTo
+        arguments: ["@request_stack", "@router"]
+        public: false
+        tags:
+            - { name: twig.extension }

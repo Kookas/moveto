@@ -12,6 +12,7 @@
 namespace Kookas\MoveToBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Kookas\MoveToBundle\DependencyInjection\KookasMoveToExtension;
 
 /**
  * KookasMoveToBundle
@@ -23,4 +24,8 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class KookasMoveToBundle extends Bundle
 {
+	public function getContainerExtension()
+    {
+        return new KookasMoveToExtension();
+    }
 }
