@@ -1,5 +1,5 @@
 {
-    "name": "kookas/moveto",
+    "name": "kookas/movetobundle",
     "autoload": {
         "psr-0" : {
             "Kookas\\MoveToBundle" : "src"
