@@ -46,13 +46,13 @@ class MoveTo extends \Twig_Extension
         [
             'route' => $this
                 ->getRequestStack()
-                ->getCurrentRequest()
+                ->getMasterRequest()
                 ->attributes
                 ->get('_route'),
                 
             'params' => $this
                 ->getRequestStack()
-                ->getCurrentRequest()
+                ->getMasterRequest()
                 ->attributes
                 ->get('_route_params')
         ];
