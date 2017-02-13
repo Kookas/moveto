@@ -1,7 +1,20 @@
 {
     "name": "kookas/movetobundle",
-    "autoload": {
-        "psr-0" : {
+    "type": "library",
+    "description": "Generate paths without having to restate every parameter in the current one.",
+    "keywords": ["route", "routing"],
+    "license": "MIT",
+    "authors":
+    [
+        {
+            "name": "Ashleigh Udoh",
+            "email": "kookas.mail@gmail.com"
+        }
+    ],
+    "autoload":
+    {
+        "psr-0" : 
+        {
             "Kookas\\MoveToBundle" : "src"
         }
     }
