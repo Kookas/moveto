@@ -2,13 +2,13 @@
     "name": "kookas/movetobundle",
     "type": "library",
     "description": "Generate paths without having to restate every parameter in the current one.",
-    "keywords": ["route", "routing"],
+    "keywords": ["route", "routing", "symfony"],
     "license": "MIT",
     "authors":
     [
         {
             "name": "Ashleigh Udoh",
-            "email": "kookas.mail@gmail.com"
+            "email": "mail@audoh.co.uk"
         }
     ],
     "autoload":
