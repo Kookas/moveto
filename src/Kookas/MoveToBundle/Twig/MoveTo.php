@@ -3,7 +3,7 @@
 /**
  * This file is part of kookas/movetobundle.
  *
- * (c) Ashleigh Udoh <kookas.mail@gmail.com>
+ * (c) Ashleigh Udoh <mail@audoh.co.uk>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,33 +11,26 @@
 
 namespace Kookas\MoveToBundle\Twig;
 
-class MoveTo extends \Twig_Extension
+use Twig_Extension,
+    Twig_SimpleFunction;
+
+class MoveTo extends Twig_Extension
 {
-    private $_requestStack;
-    private $_router;
+    private $requestStack;
+    private $router;
     
     public function __construct($requestStack, $router)
     {
-        $this->_requestStack = $requestStack;
-        $this->_router = $router;
+        $this->requestStack = $requestStack;
+        $this->router = $router;
     }
     
     public function getFunctions()
     {
         return 
         [
-            new \Twig_SimpleFunction('moveTo', [$this, 'moveTo'])
+            new Twig_SimpleFunction('moveTo', [$this, 'moveTo'])
         ];
-    }
-    
-    private function getRequestStack()
-    {
-        return $this->_requestStack;
-    }
-    
-    private function getRouter()
-    {
-        return $this->_router;
     }
     
     private function getUrl()
@@ -45,13 +38,13 @@ class MoveTo extends \Twig_Extension
         $uri = 
         [
             'route' => $this
-                ->getRequestStack()
+                ->requestStack
                 ->getMasterRequest()
                 ->attributes
                 ->get('_route'),
                 
             'params' => $this
-                ->getRequestStack()
+                ->requestStack
                 ->getMasterRequest()
                 ->attributes
                 ->get('_route_params')
@@ -69,7 +62,7 @@ class MoveTo extends \Twig_Extension
         
         $path['params'] = array_replace($path['params'], $params);
         
-        $uri = $this->getRouter()->generate($path['route'], $path['params']);
+        $uri = $this->router->generate($path['route'], $path['params']);
         
         return $uri;
     }

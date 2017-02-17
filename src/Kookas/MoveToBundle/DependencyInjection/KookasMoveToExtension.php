@@ -3,7 +3,7 @@
 /**
  * This file is part of kookas/movetobundle.
  *
- * (c) Ashleigh Udoh <kookas.mail@gmail.com>
+ * (c) Ashleigh Udoh <mail@audoh.co.uk>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
